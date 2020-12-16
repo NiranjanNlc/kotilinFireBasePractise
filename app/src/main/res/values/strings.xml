@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">WrapFirebase</string>
+    <string name="lblTitle">Title </string>
+    <string name="lblAuthor">Author </string>
+    <string name="lblPublisher">Publisher</string>
+    <string name="lblIsbn">ISBN</string>
+    <string name="submit">SUBMIT</string>
+    <string name="cancel">CLEAR</string>
 </resources>

@@ -1,12 +1,16 @@
 package com.example.wrapfirebase.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wrapfirebase.R
+import com.example.wrapfirebase.activities.Booketail
 import com.example.wrapfirebase.model.Book
+import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.android.synthetic.main.bookdata_xml.view.*
 
 class BookAdapter(val userList: MutableList<Book>) : RecyclerView.Adapter<BookAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -34,5 +38,14 @@ class BookAdapter(val userList: MutableList<Book>) : RecyclerView.Adapter<BookAd
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItems(userList.get(position))
+        holder.itemView.setOnClickListener { v ->
+            val context = v.context
+            val intent = Intent(context, Booketail::class.java)
+            intent.putExtra(Booketail.ARG_ITEM_ID,holder.itemView.textViewIsbn.text)
+            intent.putExtra(Booketail.AUTHOR,holder.itemView.textViewAuthor.text)
+            intent.putExtra(Booketail.TITLE,holder.itemView.textViewIsbn.text)
+            intent.putExtra(Booketail.PUB,holder.itemView.textViewpublisher.text)
+            context.startActivity(intent)
+        }
     }
 }

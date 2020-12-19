@@ -1,6 +1,6 @@
 package com.example.wrapfirebase.model
 
-data class Book(val title: String="", val author: String="",val isbn:String="",val publisher: String="")
+data class Book(var title: String="", var author: String="", var isbn:String="", var publisher: String="")
 {
 
 }

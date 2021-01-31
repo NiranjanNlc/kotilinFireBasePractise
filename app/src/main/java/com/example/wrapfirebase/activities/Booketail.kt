@@ -18,7 +18,7 @@ class Booketail : AppCompatActivity() {
         btnSubmit.text="Update"
         btnCancel.text="Delete"
         //        setSupportActionBar(detail_toolbar as Toolbar?)
-        // Show the Up button in the action bar.
+        // Show the Up  button in the action bar.
 //        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val bundle: Bundle? = intent.extras
